@@ -13,6 +13,18 @@ Also the PureCloud setup is very standard.
 - Add a bridge action as described here: https://help.mypurecloud.com/articles/add-bridge-actions-web-services-data-dip-connector/. Select 'NodeJS_WS_Connector' group and 'GetAccountByAccountNumber' action and click next button. Name the action as e.g. 'Node_GetAccByAccNr' and add category name e.g. 'WStoNode'. Check 'Flatten metadata' and click add action. Publish the action.
 
 ## How do I use it?
-Please check these instructions first: https://help.mypurecloud.com/articles/use-bridge-actions-architect-web-services-data-dip-connector/. Add a new bridge action in Architect. Select category as 'WStoNode' and select action 'Node_GetAccByAccNr'.
-For the Inputs you have to provide the AccountNumber you want to lookup in the database. This is most likely a variable that was assigned to user input at the beginning of the call flow, so you enter it here.
-If the request was successful it will have returned the correct information and have it made available in the different relevant output fields. After this the values can be used in the call flow or can be assigned to variables in a script.
+- Please check these instructions first: https://help.mypurecloud.com/articles/use-bridge-actions-architect-web-services-data-dip-connector/. Add a new bridge action in Architect. Select category as 'WStoNode' and select action 'Node_GetAccByAccNr'.
+- For the Inputs you have to provide the AccountNumber you want to lookup in the database. This is most likely a variable that was assigned to user input at the beginning of the call flow, so you enter it here.
+- If the request was successful it will have returned the correct information and have it made available in the different relevant output fields. After this the values can be used in the call flow or can be assigned to variables in a script.
+
+## Database model
+The database to connect to in the example code is "CRM" and the table is dbo.customers. The structure is very simple and has following columns (all as varchars):
+- AccountNumber
+- Name
+- StreetName
+- StreetNumber
+- ZIP
+- City
+- Phone
+- Email
+The example code is very clear and straightforward so adopt to your own needs and setup.
