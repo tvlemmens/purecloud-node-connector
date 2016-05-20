@@ -161,7 +161,7 @@ var server = app.listen(8081, function () {
 // in this case it has a different name so we're using localhost\\instancename
 var config = {
     user: 'sa',
-    password: 'Admin01!',
+    password: '',
     server: 'localhost\\PCENVMSSQL', // You can use 'localhost\\instance' to connect to named instance
     database: 'CRM',
 
